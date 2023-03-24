@@ -1,38 +1,290 @@
-.App {
+.darkText{
+  color: aliceblue;
+}
+
+.dayText{
+  color: darkslategray;
+}
+
+/* Weather Styles */
+
+@font-face {
+  font-family: Kai;
+  src: url(./fonts/KaiseiDecol-Regular.ttf);
+}
+
+@font-face {
+  font-family: KaiBold;
+  src: url(./fonts/KaiseiDecol-Bold.ttf);
+}
+
+.favoritesTextNight{
+  color: whitesmoke;
+  font-size: larger;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.favoritesTextNight:hover{
+  color: rgb(205, 200, 200);
+  font-size: larger;
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.moving-W{
+  left: 50%;
+  top: 10px;
+  position: relative;
+  background-color: rgba(99, 53, 53, 0.4);
+  height: 30px;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.moving{
+  position: absolute;
+  display: block;
+  margin: auto auto;
+  white-space: nowrap;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.moving span {
+  display: inline-block;
+  padding-left: 100%;
   text-align: center;
+  -webkit-text-stroke: 1px #43e486;
+  white-space: nowrap;
+  min-width: 150%;
+  height: 100%;
+  font-size: large;
+  animation: moving 20s linear infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* .moving2 span{
+  animation-delay: 5s;
+} */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes moving {
+  0%{
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.favoritesTextDay{
+  color: darkslategray;
+  font-size: large;
+  font-weight: 500;
+  cursor: pointer;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.favoritesTextDay:hover{
+  color: cadetblue;
+  font-size: larger;
+  text-decoration: underline;
+}
+
+
+.heroIMG {
+  background-image: url(./assets/pexels-siglinde-luise-13176978.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: 0px;
+}
+.heroIMGNight {
+  background-image: url(./assets/Night.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0px;
+}
+
+.cardBG {
+  background-color: rgb(0, 0, 0, 0.4);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.oneDayBtn {
+  background-color: rgb(242, 141, 141);
+  font-size: xx-large;
+  border-radius: 10px;
+}
+
+.fiveDayBtn {
+  background-color: rgb(80, 220, 90);
+  font-size: xx-large;
+  border-radius: 10px;
+}
+
+.fiveDayForecastText {
+  font-size: 50px;
+  font-family: Kai;
+}
+
+.tempText {
+  font-size: 30px;
+  font-family: Kai;
+}
+
+.tempTextNight {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-family: Kai;
+}
+
+.oneDayForecastRow {
+  border: 5px solid rgb(242, 141, 141, 0.8);
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+.oneDayForecastRowNight {
+  border: 6px solid rgba(128, 78, 220, 0.8);
+  border-radius: 15px;
+  background-color: rgba(82, 30, 30, 0.8);
+}
+
+.fiveDayForecastRow {
+  border: 6px solid rgb(80, 220, 90, 0.8);
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+.fiveDayForecastRowNight {
+  border: 6px solid rgba(128, 78, 220, 0.8);
+  border-radius: 15px;
+  background-color: rgba(82, 30, 30, 0.8);
+}
+
+.headerText {
+  font-family: Kai;
   color: white;
+  font-size: 36px;
 }
 
-.App-link {
-  color: #61dafb;
+.fiveDayImg{
+  margin-top: -70px;
+  margin-bottom: -30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tempTextHeroImg {
+  font-family: KaiBold;
+  font-size: 25px;
+}
+
+.conditionTextHeroImg {
+  font-family: Kai;
+}
+
+.iconPlasment{
+  display: flex;
+  justify-content: center;
+  margin-top: -50px;
+}
+
+.vl {
+  border-left: 2px solid rgb(0, 0, 0);
+  height: 75px;
+  position: relative;
+  margin-right: -15px;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+.tempMargin{
+margin-left: -40px;
+}
+
+.tempMargin2{
+  padding-left: 100px;
+}
+
+
+@media screen and (max-width: 1184px) {
+  .heroIMG {
+    background-image: url(./assets/pexels-siglinde-luise-13176978.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin: 0px;
   }
-  to {
-    transform: rotate(360deg);
+  .heroIMGNight{
+    background-image: url(./assets/Night.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin: 0px;
+  }
+
+  .mobilePadding {
+    padding-top: 25px;
+  }
+  .iconPlasment{
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+    margin-bottom: -30px;
+  }
+
+  .moving span {
+    min-width: 170%;
+  }
+  
+  .moving2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .fiveDayForecastText {
+    font-size: 35px;
+  }
+.cardPadding{
+  margin-top: 20px;
+}
+
+  .fiveDayImg{
+    margin-top: -70px;
+    margin-bottom: -70px;
+  }
+  .vl {
+    border-left: 2px solid rgb(0, 0, 0);
+    height: 60px;
+    position: relative;
+    margin-right: -15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .moving span {
+    min-width: 192%;
+    animation: moving 15s linear infinite;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+  .fiveDayForecastText {
+    font-size: 25px;
+  }
+
+  .moving span {
+    min-width: 195%;
   }
 }
